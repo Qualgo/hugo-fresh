@@ -135,14 +135,14 @@ sidebar:
 
 </details>
 
-### section1
+### section_services
 Describes the second "page" which you will see when you scroll down. Currently it will have **always** three `titles`.
 
 <details>
 <summary>Code</summary>
 
 ```yaml
-section1:
+section_services:
   title: Great power comes
   subtitle: with great responsibility
   tiles:
@@ -207,14 +207,14 @@ section3:
 
 </details>
 
-### section4
+### section_about_us
 What clients says about us.
 
 <details>
 <summary>Code</summary>
 
 ```yaml
-section4:
+section_about_us:
   title: Our Clients love us!
   subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
   clients:
@@ -234,14 +234,14 @@ section4:
 
 </details>
 
-### section5
+### section_contact_us
 Write us.
 
 <details>
 <summary>Code</summary>
 
 ```yaml
-section5: true # or false to hide it
+section_contact_us: true # or false to hide it
 ```
 
 </details>
