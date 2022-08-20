@@ -2,6 +2,8 @@
 Section Styles
 ========================================================================== */
 
+$breakpoint-mobile: 768px;
+
 //Sections
 .section {
     &.section-light-grey {
@@ -67,6 +69,15 @@ img.pushed-image {
 //Icon box
 .media.icon-box {
     border-top: none !important;
+    
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 3px;
+    border: 1px solid #ececec;
+    box-shadow: 0px 0px 3px 1px #f4f4f4;
+    padding-inline: 30px;
+    
     .media-content .content p {
         span {
             display: block;
@@ -74,12 +85,38 @@ img.pushed-image {
         .icon-box-title {
             color: $blue-grey;
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: 900;
         }
-        .icon-box-text {
-            color: $title-grey;
+        .icon-box {
+            color: $medium-grey;
             font-size: 1rem;
             font-weight: 400;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .media.icon-box {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0rem;
+        padding-inline: 0px;
+
+        .media-left {
+            margin-right: 0rem;
+        }
+
+        .media-content {
+            margin-top: 0px;
+            padding-inline: 30px;
+            padding-bottom: 30px;
         }
     }
 }

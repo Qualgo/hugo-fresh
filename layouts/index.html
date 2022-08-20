@@ -8,16 +8,12 @@
     {{ partial "section_mission.html" . }} 
 {{ end }}
 
-{{ if .Site.Params.section_services }} 
-    {{ partial "section_services.html" . }} 
-{{ end }} 
-
-{{ if .Site.Params.section3 }}
-    {{ partial "section3.html" . }}
-{{ end }} 
-
 {{ if .Site.Params.section_about_us }}
     {{ partial "section_about_us.html" . }}
+{{ end }} 
+
+{{ if .Site.Params.section_services }} 
+    {{ partial "section_services.html" . }} 
 {{ end }} 
 
 {{ if .Site.Params.section_contact_us }} 

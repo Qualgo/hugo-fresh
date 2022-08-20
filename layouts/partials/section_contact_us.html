@@ -1,12 +1,12 @@
 {{- $section_contact_us := .Site.Params.section_contact_us }}
 {{- $title    := index $section_contact_us "title" }}
 {{- $subtitle := index $section_contact_us "subtitle" }}
-<section id="contact-us" class="section section-light-grey is-medium">
+<section id="contact-us" class="section section-secondary is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2 is-spaced">{{ $title }}</h2>
+      <h2 class="title is-2 light-text is-spaced">{{ $title }}</h2>
       {{- with $subtitle }}
-      <h3 class="subtitle is-5 is-muted">{{ . }}</h3>
+      <h3 class="subtitle is-5 light-text">{{ . }}</h3>
       {{- end }}
       <div class="divider is-centered"></div>
     </div>
@@ -14,19 +14,19 @@
     <div class="content-wrapper">
       <div class="columns">
         <div class="column is-6 is-offset-3">
-          <form>
+          <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
             <div class="columns is-multiline">
               <div class="column is-6">
-                <input class="input is-medium" type="text" placeholder="Enter your name">
+                <input class="input is-medium" type="text" name="name" placeholder="Full Name" required>
               </div>
               <div class="column is-6">
-                <input class="input is-medium" type="email" placeholder="Enter your email address">
+                <input class="input is-medium" name="email" type="email" placeholder="Email Address" required>
               </div>
               <div class="column is-12">
                 <textarea class="textarea" rows="10" placeholder="Write someting..."></textarea>
               </div>
               <div class="form-footer has-text-centered mt-10">
-                <button class="button cta is-large primary-btn raised is-clear">Send Message</button>
+                <button class="button cta is-large accent-btn raised is-clear" type="submit">Send Message</button>
               </div>
             </div>
           </form>
