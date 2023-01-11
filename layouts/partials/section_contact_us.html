@@ -1,6 +1,6 @@
-{{- $section_contact_us := .Site.Params.section_contact_us }}
-{{- $title    := index $section_contact_us "title" }}
-{{- $subtitle := index $section_contact_us "subtitle" }}
+{{- $section_contact_us := .Site.Params.section_contact_us }} {{- $title :=
+index $section_contact_us "title" }} {{- $subtitle := index $section_contact_us
+"subtitle" }}
 <section id="contact-us" class="section section-secondary is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -14,19 +14,45 @@
     <div class="content-wrapper">
       <div class="columns">
         <div class="column is-6 is-offset-3">
-          <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+          <form
+            target="_blank"
+            action="https://formsubmit.co/admin@qualgo.io"
+            method="POST"
+          >
             <div class="columns is-multiline">
               <div class="column is-6">
-                <input class="input is-medium" type="text" name="name" placeholder="Full Name" required>
+                <input
+                  class="input is-medium"
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                />
               </div>
               <div class="column is-6">
-                <input class="input is-medium" name="email" type="email" placeholder="Email Address" required>
+                <input
+                  class="input is-medium"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
               </div>
               <div class="column is-12">
-                <textarea class="textarea" rows="10" placeholder="Write someting..."></textarea>
+                <textarea
+                  class="textarea"
+                  rows="10"
+                  placeholder="Write something..."
+                  name="message"
+                ></textarea>
               </div>
               <div class="form-footer has-text-centered mt-10">
-                <button class="button cta is-large accent-btn raised is-clear" type="submit">Send Message</button>
+                <button
+                  class="button cta is-large accent-btn raised is-clear"
+                  type="submit"
+                >
+                  Send Message
+                </button>
               </div>
             </div>
           </form>

@@ -1,10 +1,8 @@
-{{- $section_about_us := .Site.Params.section_about_us }}
-{{- $title    := index $section_about_us "title" }}
-{{- $subtitle := index $section_about_us "subtitle" }}
-{{- $clients  := index $section_about_us "clients" }}
+{{- $section_about_us := .Site.Params.section_about_us }} {{- $title := index
+$section_about_us "title" }} {{- $subtitle := index $section_about_us "subtitle"
+}} {{- $clients := index $section_about_us "clients" }}
 <section id="about-us" class="section is-medium section-secondary">
   <div class="container">
-
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2 light-text is-spaced">{{ $title }}</h2>
       <h3 class="subtitle is-5 light-text">{{ $subtitle }}</h3>
@@ -13,13 +11,12 @@
     <div class="content-wrapper">
       <div class="columns is-vcentered">
         {{- range $clients }}
-        <div class="column is-4">
+        <div class="column is-3">
           <figure class="testimonial">
-            <blockquote>
-              {{ .quote }}
-            </blockquote>
+            <blockquote>{{ .quote }}</blockquote>
             <div class="author">
-              <img src="{{ printf "/images/illustrations/faces/%s.png" (string .img) | relURL }}" alt=""/>
+              <img src="{{ printf "/images/illustrations/faces/%s.jpeg" (string
+              .img) | relURL }}" alt=""/>
               <h5>{{ .name }}</h5>
               <span>{{ .job }}</span>
             </div>
